@@ -12,11 +12,11 @@ projects.
 ~ $ git clone https: //github.com/moriire/django-setup.git
 ```
 ```sh
-~ $ cd django-setup
+~ $ cd django-setup/django-setup
 ```
 ```sh
-~/django-setup $ chmod u+x ./django-setup.sh
+~/django-setup/django-setup $ chmod u+x ./django-setup.sh
 ```
 ```sh
-~ $ django-setup
+~/django-setup/django-setup $ ./django-setup.sh
 ```
