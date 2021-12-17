@@ -1,4 +1,3 @@
-source config.sh;
 cat 007.txt;
 
 errors(){
@@ -103,8 +102,7 @@ else
         errors "Like this project already exists";
         echo continue...;
 fi;
-
-read -p  "Project Name[unamed]: " projname;
+read -p "Project Name[unamed]: " projname;
 if [[ $projname == '' || $projname == ' ' ]]; then
         projname='unamed';
 fi;
@@ -117,19 +115,16 @@ else
 fi;
         read -p "App Name: " appname;
         app $appname $projname &&
-        dpurls $projname $appname && echo project urls configured && dpapps $projname $appname && echo $appname urls configured sucessfully. &&
-        psettings $projname;
-        appview $projname $appname && echo home page successfully setup.;
+        python3 ../../config.py "$projname" "$appname" && echo home page successfully setup.;
         if [ ! -d "./$appname/templates/" ];
         then
-                mkdir "./$appname/templates"
+                mkdir "./$appname/templates" && echo templates folder created
                 else
                         echo templates folder created;
-        fi;
-
-        if [ ! -d "./$appname/static/" ];
+        fi && cp -r "../../assets/index.html" "./$appname/templates"
+if [ ! -d "./$appname/static/" ];
         then
-                mkdir "./$appname/static"
+                mkdir "./$appname/static" && echo static folder created
                 else
                         echo static folder created... ;
-        fi;
+        fi && cp -r "../../assets/js" "./$appname/static/" && cp -r "../../assets/css" "./$appname/static/" && python3 manage.py migrate && read -p "Server Addr['localhost:8000']" url && python3 manage.py runserver $url && python3 ../../browser.py $url;
