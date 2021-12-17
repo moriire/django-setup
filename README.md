@@ -6,7 +6,7 @@ automates the boring setup process of django
 projects.
 
 ## Installation
-
+Git clone
 ```sh
 
 ~ $ git clone https: //github.com/moriire/django-setup.git
@@ -15,8 +15,11 @@ projects.
 ~ $ cd django-setup/django-setup
 ```
 ```sh
+Set permission
 ~/django-setup/django-setup $ chmod u+x ./django-setup.sh
 ```
+Run scrpt
 ```sh
 ~/django-setup/django-setup $ ./django-setup.sh
 ```
+Follow prompts
