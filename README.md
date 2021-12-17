@@ -12,14 +12,14 @@ Git clone
 ~ $ git clone https: //github.com/moriire/django-setup.git
 ```
 ```sh
-~ $ cd django-setup/django-setup
+cd django-setup/django-setup
 ```
-```sh
 Set permission
-~/django-setup/django-setup $ chmod u+x ./django-setup.sh
+```sh
+chmod u+x ./django-setup.sh
 ```
 Run scrpt
 ```sh
-~/django-setup/django-setup $ ./django-setup.sh
+./django-setup.sh
 ```
 Follow prompts
