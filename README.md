@@ -9,7 +9,7 @@ projects.
 Git clone
 ```sh
 
-git clone https: //github.com/moriire/django-setup.git
+git clone https:/github.com/moriire/django-setup.git
 ```
 ```sh
 cd django-setup/django-setup
